@@ -1,126 +1,88 @@
-# \# Email Spam Classification Using Logistic Regression
-
-# 
-
-# \## Overview
-
-# This project applies logistic regression to classify emails as spam or not spam using the Spambase dataset from the UCI Machine Learning Repository. 
-
-# It demonstrates the complete data science workflow, from data cleaning and feature engineering to model development, evaluation, and interpretation.
-
-# 
-
-# \## Objectives
-
-# \- Perform exploratory data analysis (EDA) on textual frequency data.
-
-# \- Build and evaluate logistic regression models with and without regularization.
-
-# \- Apply principal component analysis (PCA) for dimensionality reduction and visualization.
-
-# \- Assess model performance using accuracy, precision, recall, F1-score, and ROC-AUC metrics.
-
-# 
-
-# \## Methods and Tools
-
-# \- \*\*Programming Language:\*\* Python
-
-# \- \*\*Libraries:\*\* pandas, numpy, matplotlib, seaborn, scikit-learn
-
-# \- \*\*Environment:\*\* Jupyter Notebook
-
-# \- \*\*Version Control:\*\* GitHub
-
-# 
-
-# \## Project Structure
-
-# ```
-
-# spam-classification/
-
-# │
-
-# ├── data/
-
-# │   └── spambase.csv
-
-# │
-
-# ├── notebooks/
-
-# │   └── spam\_classification.ipynb
-
-# │
-
-# ├── report/
-
-# │   └── spam\_report.pdf
-
-# │
-
-# ├── README.md
-
-# └── requirements.txt
-
-# ```
-
-# 
-
-# \## Results
-
-# | Metric | Score |
-
-# |--------|--------|
-
-# | Accuracy | 93.5% |
-
-# | Precision (Spam) | 92% |
-
-# | Recall (Spam) | 91.7% |
-
-# | ROC-AUC | 0.975 |
-
-# 
-
-# \*\*Key Predictors\*\*
-
-# \- char\_freq\_!
-
-# \- word\_freq\_your
-
-# \- word\_freq\_free
-
-# \- capital\_run\_length\_longest
-
-# 
-
-# The logistic regression model achieved strong predictive performance, confirming that well-engineered linear models can effectively classify spam emails based on textual features.
-
-# 
-
-# \## Future Work
-
-# \- Incorporate additional features such as sender metadata or message context.
-
-# \- Experiment with advanced models such as Gradient Boosted Trees or Neural Networks.
-
-# \- Evaluate performance on contemporary datasets to assess model generalization.
-
-# \- Develop a Streamlit-based application for real-time spam prediction.
-
-# 
-
-# \## Author
-
-# Rania Hamid  
-
-# Graduate Student, Data Analytics (UMGC)  
-
-# LinkedIn: \[linkedin.com/in/raniahamid](https://www.linkedin.com/)  
-
-# GitHub: \[github.com/raniahamid](https://github.com/)
-
-
-
+# Spam Email Classification Using Logistic Regression
+
+This project develops a statistical classification model to determine whether an email is spam or not spam using the UCI Spambase dataset.
+The analysis applies a complete supervised machine learning workflow, including exploratory data analysis, feature diagnostics, dimensionality reduction, logistic regression modeling, and evaluation using multiple performance metrics.
+
+Project Overview
+----------------
+The Spambase dataset contains 4,601 email observations and 57 numeric predictors representing word frequencies, character frequencies, and structural features of email messages.
+The objective of this project is to determine whether logistic regression can reliably discriminate between spam and non-spam emails while addressing analytical challenges such as:
+
+- High dimensionality
+- Multicollinearity among predictors
+- Outlier presence
+- Class imbalance
+- Model interpretability
+
+This project integrates statistical inference and predictive modeling to produce interpretable, high-performing classification models.
+
+Repository Structure
+--------------------
+spam-email-classification/
+├─ Unit 3-4 Assignment - Technical Appendix.ipynb
+├─ Unit 4 Assignment - Classifying Email as Spam or Not Spam.pdf
+└─ README.md
+
+File Descriptions
+-----------------
+- Unit 3-4 Assignment - Technical Appendix.ipynb  
+  Jupyter notebook containing preprocessing, EDA, PCA, logistic regression models, and evaluation metrics.
+
+- Unit 4 Assignment - Classifying Email as Spam or Not Spam.pdf  
+  Written report describing methodology, results, interpretations, and limitations.
+
+Methodology
+-----------
+1. Data Preparation
+   - Examined distributions, summary statistics, and variable types.
+   - Identified and addressed outliers through log-transformations where appropriate.
+   - Standardized predictors due to varying measurement scales.
+   - Split the dataset into training and testing partitions.
+
+2. Exploratory Data Analysis
+   - Investigated predictor correlations and detected strong multicollinearity among frequency-based variables.
+   - Examined class proportions (spam ≈ 39%).
+   - Visualized distributions and identified influential variables.
+
+3. Logistic Regression Models
+   A sequence of logistic regression models was developed:
+   - Full logistic regression model including all predictors.
+   - Reduced model after removing highly correlated variables.
+   - PCA-based logistic regression, retaining principal components that explain ~90% of variance.
+   - Regularized logistic regression using L1 (Lasso) and L2 (Ridge) penalties.
+
+4. Model Evaluation
+   Models were evaluated using:
+   - Accuracy
+   - Precision, recall, F1 score
+   - Confusion matrix
+   - ROC curve and AUC
+
+   Final model performance:
+   - Accuracy: ~93.5%
+   - ROC AUC: 0.975
+   - Balanced performance across classes with reduced false positives and false negatives.
+
+Key Findings
+------------
+- Word and character frequency features are strong indicators of spam likelihood.
+- Logistic regression performs well even in high-dimensional settings when supported by normalization and multicollinearity mitigation.
+- PCA reduces noise and collinearity while preserving predictive performance.
+- Regularization enhances model stability and interpretability.
+
+Limitations
+-----------
+- The Spambase dataset reflects older email behaviors; modern spam detection may require more sophisticated models.
+- Logistic regression assumes linear log-odds relationships, which may not fully capture complex email patterns.
+- Ensemble and tree-based methods (e.g., Random Forests, Gradient Boosting) may provide stronger nonlinear performance.
+
+Outcome
+-------
+This project demonstrates the effectiveness of logistic regression for email spam classification and provides a reproducible analytical workflow for supervised learning tasks.
+The findings highlight best practices in data preprocessing, dimensionality reduction, multicollinearity handling, and model validation.
+
+Author
+------
+Rania Hamid
+GitHub: https://github.com/ranuyay
+Portfolio: https://github.com/ranuyay/Public-Portfolio
