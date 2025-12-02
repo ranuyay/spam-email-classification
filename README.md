@@ -19,16 +19,16 @@ This project integrates statistical inference and predictive modeling to produce
 Repository Structure
 --------------------
 spam-email-classification/
-├─ Unit 3-4 Assignment - Technical Appendix.ipynb
-├─ Unit 4 Assignment - Classifying Email as Spam or Not Spam.pdf
+├─ Notebook - spam_email_notebook.ipynb
+├─ Report - Spam Email Classification Using Logistic Regression.pdf
 └─ README.md
 
 File Descriptions
 -----------------
-- Unit 3-4 Assignment - Technical Appendix.ipynb  
+- Notebook - spam_email_notebook.ipynb  
   Jupyter notebook containing preprocessing, EDA, PCA, logistic regression models, and evaluation metrics.
 
-- Unit 4 Assignment - Classifying Email as Spam or Not Spam.pdf  
+- Report - Spam Email Classification Using Logistic Regression.pdf  
   Written report describing methodology, results, interpretations, and limitations.
 
 Methodology
